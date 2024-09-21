@@ -23,8 +23,8 @@ def read_config(config_file):
 def compute_y(x, a, b, c):
     try:
         sqrt_part = math.sqrt(a - x)
-        sin_part = math.sin(b * x + c) ** 2
-        return sqrt_part * sin_part
+        sin_part = math.sin(b * x) ** 2
+        return sqrt_part * sin_part + c
     except ValueError:
         return None  # Возвращаем None, если a - x < 0, чтобы избежать ошибки при вычислении корня
 
