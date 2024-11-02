@@ -38,8 +38,7 @@ def write_results(results_file, results):
         y_elem = ET.SubElement(result_elem, "y")
 
         x_elem.text = str(x)
-        y_elem.text = str(
-            y) if y is not None else "undefined"  # Обработка случая, если значение не может быть вычислено
+        y_elem.text = str(y) if y is not None else "undefined"  # Обработка случая, если значение не может быть вычислено
 
     # Создание строки из XML-дерева
     rough_string = ET.tostring(root, 'utf-8')
